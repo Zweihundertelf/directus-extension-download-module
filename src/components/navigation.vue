@@ -13,7 +13,7 @@
 
     <v-list-item to="/data/import">
       <v-list-item-icon>
-        <v-icon />
+        <v-icon name="upload" />
       </v-list-item-icon>
       <v-list-item-content>
         <v-text-overflow text="Import Data" />
@@ -22,7 +22,7 @@
 
     <v-list-item to="/data/export">
       <v-list-item-icon>
-        <v-icon />
+        <v-icon name="download" />
       </v-list-item-icon>
       <v-list-item-content>
         <v-text-overflow text="Export Data" />

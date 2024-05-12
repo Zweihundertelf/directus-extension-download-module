@@ -41,13 +41,19 @@ const selectCollection = (collection: string) => {
 </script>
 
 <template>
-  <private-view title="Export Data Module">
+  <private-view title="Export Data Model">
+    <template #title-outer:prepend>
+      <v-button rounded disabled icon>
+        <v-icon name="database" />
+      </v-button>
+    </template>
     <template #navigation>
       <NavbarComponent />
     </template>
     <template #actions>
       <v-button :download="downloadRef.name + '.json'" :href="downloadRef.content" :disabled="!selectedValue" @click="downloadRef = { content: null, name: null }">Download</v-button>
     </template>
+
     <div class="wrapper">
       <FancySelect :collections="collections" v-model="selectedValue" @click="selectCollection(selectedValue)" />
     </div>

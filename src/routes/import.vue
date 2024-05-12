@@ -30,13 +30,19 @@ const handleUpload = () => {
 </script>
 
 <template>
-  <private-view title="Import Data Module">
+  <private-view title="Import Data Model">
+    <template #title-outer:prepend>
+      <v-button rounded disabled icon>
+        <v-icon name="database" />
+      </v-button>
+    </template>
     <template #navigation>
       <NavbarComponent />
     </template>
     <template #actions>
       <v-button :disabled="!uploadRef" @click="handleUpload">Upload</v-button>
     </template>
+
     <div class="wrapper">
       <input
         type="file"
